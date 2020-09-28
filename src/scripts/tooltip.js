@@ -90,6 +90,18 @@ class Tooltip extends HTMLElement {
         } else {
             tooltipSvg.style.display = "none";
         }
+
+        if (popupColor) {
+            PopupMessage.style.color = popupColor;
+        }
+
+        if (popupBGColor) {
+            PopupMessage.style.backgroundColor = popupBGColor;
+        }
+
+        if (popupWidth) {
+            PopupMessage.style.width = popupWidth;
+        }
     }
 }
 
