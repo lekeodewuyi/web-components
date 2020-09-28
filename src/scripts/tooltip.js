@@ -85,6 +85,12 @@ class Tooltip extends HTMLElement {
         const tooltipSvg = this.shadowRoot.querySelector('.tooltip-svg');
         const tooltipText = this.shadowRoot.querySelector('.tooltip-text');
 
+        const popupColor = this.getAttribute("popup-color");
+        const popupBGColor = this.getAttribute("popup-bg-color");
+        const popupWidth = this.getAttribute("popup-width");
+
+        const PopupMessage = this.shadowRoot.querySelector('.tooltip-popup-message');
+
         if (tipType === "svg") {
             tooltipText.style.display = "none";
         } else {
