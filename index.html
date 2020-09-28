@@ -9,6 +9,25 @@
     <script src="./src/scripts/tooltip.js" defer></script>
 </head>
 <body>
+    <h1>Custom Tooltip Web Component</h1>
+    <p> 
+        This is a sentence to show how the
+        <tool-tip popup-color="white" popup-bg-color="#eeaabb">
+            <span slot="text">tooltip</span>
+            <span slot="popup-message">This is a tooltip, it is displayed on hover</span>
+        </tool-tip>
+        works.
+    </p>
 
+    <p>
+        This is a test for a tooltip
+        <tool-tip type="svg" popup-width="300px">
+            <span slot="svg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="8"/></svg>
+            </span>
+            <span slot="popup-message">Hiyaaaaa, I'm the tooltip for an svg icon</span>
+        </tool-tip>
+        svg
+    </p>
 </body>
 </html>
