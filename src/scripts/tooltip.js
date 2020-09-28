@@ -79,6 +79,18 @@ class Tooltip extends HTMLElement {
         this.attachShadow({mode: 'open'}); // allows access to the shadow dom via the shadow root
         this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
+
+    connectedCallback(){
+        const tipType = this.getAttribute("type");
+        const tooltipSvg = this.shadowRoot.querySelector('.tooltip-svg');
+        const tooltipText = this.shadowRoot.querySelector('.tooltip-text');
+
+        if (tipType === "svg") {
+            tooltipText.style.display = "none";
+        } else {
+            tooltipSvg.style.display = "none";
+        }
+    }
 }
 
 window.customElements.define('tool-tip', Tooltip);
